@@ -37,7 +37,7 @@ public class JavaScriptExecutor {
 		driver.get("https://www.ebay.com/");
 		WebElement scroll = driver.findElement(By.xpath("//a[contains(text(),'Popular Destinations')]"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView(true)");
+		js.executeScript("arguments[0].scrollIntoView(true)",scroll);
 	}
 	
 	public static void navigateTo()
