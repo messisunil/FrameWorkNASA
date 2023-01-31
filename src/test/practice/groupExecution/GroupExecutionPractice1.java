@@ -1,5 +1,5 @@
 
-package edu.GroupExecution;
+package groupExecution;
 
 import org.testng.annotations.Test;
 

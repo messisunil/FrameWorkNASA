@@ -8,15 +8,11 @@
     <classes>
       <class name="IAnnotationTransformer.Test1">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
+          <include name="methodSetup"/>
+          <include name="classSetup"/>
           <include name="test1"/>
-          <include name="afterSuite"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
-          <include name="beforeSuite"/>
+          <include name="methodTeardown"/>
+          <include name="classTeardown"/>
         </methods>
       </class> <!-- IAnnotationTransformer.Test1 -->
     </classes>

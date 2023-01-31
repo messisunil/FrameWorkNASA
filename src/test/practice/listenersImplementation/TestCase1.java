@@ -1,4 +1,4 @@
-package edu.ListenersImplementation;
+package listenersImplementation;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;

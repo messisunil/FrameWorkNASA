@@ -13,7 +13,7 @@ public class SoftAsserts {
 		String s2 = "Hello";
 		SoftAssert soft = new SoftAssert();
 		soft.assertEquals(s1, s2);
-		//below two lines are  not skipped in hard assert
+		//below two lines are  not skipped in soft assert
 		System.out.println(s1);
 		System.out.println(s2);
 		soft.assertAll();

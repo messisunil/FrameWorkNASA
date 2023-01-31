@@ -120,7 +120,7 @@ public class ExcelUtility {
 	 * @param status
 	 * @param sheetNumber 
 	 */
-	public void setDataToExcel( String path, String testCaseName, Date status, String sheetNumber)
+	public void setDataToExcel( String path, String testCaseName, String status, String sheetNumber)
 	{
 		sheet = workbook.getSheet(sheetNumber);
 		for(int i=0; i<sheet.getLastRowNum();i++)

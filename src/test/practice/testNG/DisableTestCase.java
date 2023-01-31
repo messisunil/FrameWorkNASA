@@ -1,4 +1,4 @@
-package edu.TestNG;
+package testNG;
 
 import org.testng.Reporter;
 import org.testng.annotations.Test;

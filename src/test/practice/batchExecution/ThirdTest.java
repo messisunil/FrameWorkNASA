@@ -1,4 +1,4 @@
-package edu.BatchExecution;
+package batchExecution;
 
 import org.testng.annotations.Test;
 
