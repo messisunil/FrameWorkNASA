@@ -12,6 +12,8 @@ import PomClasses.ContactsPage;
 import PomClasses.CreateContactPage;
 import PomClasses.CreateLeadsPage;
 import PomClasses.CreateOrganizationPage;
+import PomClasses.EventInformationPage;
+import PomClasses.EventsPage;
 import PomClasses.HomePage;
 import PomClasses.LeadDuplicationPage;
 import PomClasses.LeadInformationPage;
@@ -41,6 +43,8 @@ public class BaseClass {
 	protected LoginPage loginPage;
 	protected OrganizationInformationPage orgInfoPage;
 	protected OrganizationPage orgPage;
+	protected EventsPage eventsPage;
+	protected EventInformationPage eventInfoPage;
 	
 //	@BeforeSuite
 
@@ -78,6 +82,9 @@ public class BaseClass {
 		loginPage = new LoginPage(driver);
 		orgInfoPage=new OrganizationInformationPage(driver);
 		orgPage = new OrganizationPage(driver);
+		eventsPage = new EventsPage(driver);
+		eventInfoPage = new EventInformationPage(driver);
+		
 		
 		loginPage.loginToApplication(property.fetchProperty("username"), property.fetchProperty("password"));	
 	}

@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="IAnnotationTransformer.Test1">
+      <class name="seleniumGrid.Practice1">
         <methods>
-          <include name="methodSetup"/>
-          <include name="classSetup"/>
-          <include name="test1"/>
-          <include name="methodTeardown"/>
-          <include name="classTeardown"/>
+          <include name="demo"/>
         </methods>
-      </class> <!-- IAnnotationTransformer.Test1 -->
+      </class> <!-- seleniumGrid.Practice1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

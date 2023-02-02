@@ -39,6 +39,7 @@ public class CreateContactPage {
 		{
 			web.childBrowserPopup();
 			List<WebElement> companyList = selectOrganization;
+		
 			for (int i = 0; i < companyList.size(); i++) {
 				String company = companyList.get(i).getText();
 				if (company.equalsIgnoreCase(organizationName)) {

@@ -20,6 +20,7 @@ public class HomePage {
 	@FindBy(xpath = "//a[text()='Sign Out']") private WebElement signoutButton;
 	@FindBy(xpath = "//td/a[contains(text(),'Contacts')]") private WebElement contacts;
 	@FindBy(xpath = "//td[@class='tabUnSelected']/a[contains(text(),'Leads')]") private WebElement leads;
+	@FindBy(xpath = "//select[@id='qccombo']") private WebElement quickList;
 	
 	//Initialization
 	public HomePage(WebDriver driver)
@@ -65,5 +66,10 @@ public class HomePage {
 	public void clickLeads()
 	{
 		leads.click();
+	}
+	
+	public void selectEvent(WebDriverUtility web)
+	{
+		web.dropDown(quickList, "Events");
 	}
 }
