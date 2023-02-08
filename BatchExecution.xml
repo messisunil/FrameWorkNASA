@@ -3,9 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="edu.BatchExecution.FirstTest"/>
-      <class name="edu.BatchExecution.ThirdTest"/>
-      <class name="edu.BatchExecution.SecondTest"/>
+      <class name="batchExecution.FirstTest"/>
+      <class name="batchExecution.SecondTest"/>
+      <class name="batchExecution.ThirdTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

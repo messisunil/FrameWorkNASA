@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumGrid.Practice1">
+      <class name="DataProvider.FacebookLogin">
         <methods>
-          <include name="demo"/>
+          <include name="login" invocation-numbers="0 1"/>
         </methods>
-      </class> <!-- seleniumGrid.Practice1 -->
+      </class> <!-- DataProvider.FacebookLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
