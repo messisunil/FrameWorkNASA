@@ -29,8 +29,8 @@ public class ListenersImplementation implements ITestListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		test.fail(result.getMethod().getMethodName());
-		test.addScreenCaptureFromPath(new WebDriverUtility().getScreenshot(new JavaUtility(), result.getMethod().getMethodName()));
-		test.addScreenCaptureFromBase64String(new WebDriverUtility().getScreenshot());
+		test.addScreenCaptureFromPath(new WebDriverUtility().getScreenshot(BaseClass.sjavaUtil, result.getMethod().getMethodName(),BaseClass.sdriver ));
+		test.addScreenCaptureFromBase64String(new WebDriverUtility().getScreenshot(BaseClass.sdriver));
 	}
 
 	@Override

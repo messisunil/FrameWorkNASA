@@ -25,11 +25,13 @@ import PomClasses.OrganizationPage;
 public class BaseClass {
 	protected ExcelUtility excelUtil;
 	protected JavaUtility javaUtil;
+	protected static JavaUtility sjavaUtil;
 	protected ListenersImplementation listenersImp;
 	protected PropertiesFileUtility property;
 	protected RetryToListenersImplementation retryToListeners;
 	protected WebDriverUtility web;
 	protected WebDriver driver;
+	protected static WebDriver sdriver;
 	
 	protected HomePage homePage;
 	protected ContactInformationPage contactInfoPage;
@@ -55,6 +57,7 @@ public class BaseClass {
 	{
 		excelUtil = new ExcelUtility();
 		javaUtil = new JavaUtility();
+		sjavaUtil = javaUtil;
 		listenersImp = new ListenersImplementation();
 		property = new PropertiesFileUtility();
 		retryToListeners = new RetryToListenersImplementation();
@@ -64,6 +67,7 @@ public class BaseClass {
 		excelUtil.excelInitialization(IConstantPath.EXCEL_FILE_PATH);
 		long time = Long.parseLong(property.fetchProperty("timeout"));
 		driver = web.openApplication(property.fetchProperty("browser"),property.fetchProperty("url"), time);
+		sdriver = driver;
 		Assert.assertTrue(driver.getTitle().contains("vtiger"));
 	}
 	

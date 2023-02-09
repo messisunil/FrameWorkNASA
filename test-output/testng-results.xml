@@ -1,45 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-07T15:34:57 IST" name="Default suite" finished-at="2023-02-07T15:35:44 IST" duration-ms="47225">
+  <suite started-at="2023-02-09T22:47:44 IST" name="Suite" finished-at="2023-02-09T22:48:13 IST" duration-ms="29137">
     <groups>
     </groups>
-    <test started-at="2023-02-07T15:34:57 IST" name="Default test" finished-at="2023-02-07T15:35:44 IST" duration-ms="47225">
-      <class name="DataProvider.FacebookLogin">
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:DataProvider.FacebookLogin@f0da945]" started-at="2023-02-07T15:34:57 IST" name="login" data-provider="readData" finished-at="2023-02-07T15:35:21 IST" duration-ms="23586" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sunil]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[sunilll]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2023-02-09T22:47:44 IST" name="Test" finished-at="2023-02-09T22:48:13 IST" duration-ms="29137">
+      <class name="edu.listenerImp.CreateOrganization">
+        <test-method is-config="true" signature="classSetup()[pri:0, instance:edu.listenerImp.CreateOrganization@272113c4]" started-at="2023-02-09T22:47:45 IST" name="classSetup" finished-at="2023-02-09T22:47:50 IST" duration-ms="5287" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="login(java.lang.String,java.lang.String)[pri:0, instance:DataProvider.FacebookLogin@f0da945]" started-at="2023-02-07T15:35:21 IST" name="login" data-provider="readData" finished-at="2023-02-07T15:35:44 IST" duration-ms="23071" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sanjay]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[sanjaaa]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- classSetup -->
+        <test-method is-config="true" signature="methodSetup()[pri:0, instance:edu.listenerImp.CreateOrganization@272113c4]" started-at="2023-02-09T22:47:50 IST" name="methodSetup" finished-at="2023-02-09T22:47:55 IST" duration-ms="4765" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-      </class> <!-- DataProvider.FacebookLogin -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- methodSetup -->
+        <test-method signature="createOrg()[pri:0, instance:edu.listenerImp.CreateOrganization@272113c4]" started-at="2023-02-09T22:47:55 IST" name="createOrg" finished-at="2023-02-09T22:48:11 IST" duration-ms="16030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrg -->
+        <test-method is-config="true" signature="methodTeardown()[pri:0, instance:edu.listenerImp.CreateOrganization@272113c4]" started-at="2023-02-09T22:48:11 IST" name="methodTeardown" finished-at="2023-02-09T22:48:13 IST" duration-ms="2401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodTeardown -->
+        <test-method is-config="true" signature="classTeardown()[pri:0, instance:edu.listenerImp.CreateOrganization@272113c4]" started-at="2023-02-09T22:48:13 IST" name="classTeardown" finished-at="2023-02-09T22:48:13 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- classTeardown -->
+      </class> <!-- edu.listenerImp.CreateOrganization -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
