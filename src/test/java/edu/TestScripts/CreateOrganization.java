@@ -1,4 +1,4 @@
-package edu.listenerImp;
+package edu.TestScripts;
 
 import java.util.Map;
 
@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import genericLibraries.TabNames;
 
 
 public class CreateOrganization  extends BaseClass{
@@ -15,12 +16,14 @@ public class CreateOrganization  extends BaseClass{
 	{
 		SoftAssert soft = new SoftAssert();
 		soft.assertTrue(homePage.verifyHomePage().equalsIgnoreCase("Home"));
-		homePage.clickOrganization();
+		homePage.clickRequiredTab(web, TabNames.ORGANIZATIONS);
 		soft.assertTrue(orgPage.verifyOrganizationPageName().equals("Organizations"));
 		orgPage.clickPlusButton();
 		soft.assertTrue(createOrgPage.verifyHeader().equals("Creating New Organization"));
-		Map<String, String> map = excelUtil.readDataFromExcel("Create Organization", "TestData");
+		Map<String, String> map = excelUtil.readDataFromExcel("Create Organization", "OrganizationsTestData");
+		System.out.println(map);
 		String orgname = map.get("Organization Name")+javaUtil.generateRandomNumber(100);
+		//String orgname = "Microsoft";
 		createOrgPage.setOrganizationName(orgname);
 		createOrgPage.clickSave();
 		soft.assertTrue(orgInfoPage.veryHeaderInfo().contains(orgname));
@@ -30,9 +33,9 @@ public class CreateOrganization  extends BaseClass{
 		soft.assertTrue(orgPage.verifyOrgNameInOrganizationPage().equals(orgFromList));
 		
 		if(orgPage.verifyOrgNameInOrganizationPage().equals(orgFromList))
-			excelUtil.setDataToExcel(IConstantPath.EXCEL_FILE_PATH, "Create Organization", "pass", "TestData");
+			excelUtil.setDataToExcel(IConstantPath.EXCEL_FILE_PATH, "Create Organization", "pass", "OrganizationsTestData");
 		else
-			excelUtil.setDataToExcel(IConstantPath.EXCEL_FILE_PATH, "Create Organization", "fail", "TestData");
+			excelUtil.setDataToExcel(IConstantPath.EXCEL_FILE_PATH, "Create Organization", "fail", "OrganizationsTestData");
 		soft.assertAll();
 	}
 	
