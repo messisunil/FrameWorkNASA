@@ -16,6 +16,7 @@ import genericLibraries.ExcelUtility;
 import genericLibraries.IConstantPath;
 import genericLibraries.JavaUtility;
 import genericLibraries.PropertiesFileUtility;
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 
 public class CreateContact {
@@ -55,7 +56,7 @@ public class CreateContact {
 //		driver.findElement(By.id("submitButton")).click();
 //		Thread.sleep(3000);
 		//creating new contact
-		home.clickContacts();
+		home.clickRequiredTab(webDriverUtil, TabNames.CONTACTS);
 //		driver.findElement(By.xpath("//td/a[contains(text(),'Contacts')]")).click();
 //		Thread.sleep(2000);
 		if(driver.getTitle().contains("Contacts"))

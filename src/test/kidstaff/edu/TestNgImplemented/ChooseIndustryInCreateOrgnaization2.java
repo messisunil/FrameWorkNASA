@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
+import genericLibraries.TabNames;
 
 public class ChooseIndustryInCreateOrgnaization2 extends BaseClass {
 	@Test
@@ -14,7 +15,7 @@ public class ChooseIndustryInCreateOrgnaization2 extends BaseClass {
 
 		SoftAssert soft = new SoftAssert();
 		soft.assertTrue(driver.getTitle().contains("Home"));
-		homePage.clickOrganization();
+		homePage.clickRequiredTab(web, TabNames.ORGANIZATIONS);
 		soft.assertTrue(driver.getTitle().contains("Organizations"));
 		orgPage.clickPlusButton();
 		soft.assertTrue(createOrgPage.verifyHeader().contains("Creating New Organization"));

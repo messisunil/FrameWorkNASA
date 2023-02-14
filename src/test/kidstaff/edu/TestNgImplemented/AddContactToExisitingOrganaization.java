@@ -6,13 +6,14 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
+import genericLibraries.TabNames;
 
 public class AddContactToExisitingOrganaization extends BaseClass {
 	@Test
 	public void AddContact() {
 		SoftAssert soft = new SoftAssert();
 		soft.assertTrue(driver.getTitle().contains("Home"));
-		homePage.clickContacts();
+		homePage.clickRequiredTab(web, TabNames.CONTACTS);
 		soft.assertTrue(driver.getTitle().contains("Contacts"));
 		contactsPage.clickCreateContacts();
 		soft.assertTrue(createContactPage.verifyCreateNweContactPage().contains("Creating New Contact"));

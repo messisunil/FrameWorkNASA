@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="DataProvider.FacebookLogin">
+      <class name="edu.TestScripts.CreateContact">
         <methods>
-          <include name="login" invocation-numbers="0 1"/>
+          <include name="createContact"/>
+          <include name="methodSetup"/>
+          <include name="classSetup"/>
+          <include name="methodTeardown"/>
+          <include name="classTeardown"/>
         </methods>
-      </class> <!-- DataProvider.FacebookLogin -->
+      </class> <!-- edu.TestScripts.CreateContact -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

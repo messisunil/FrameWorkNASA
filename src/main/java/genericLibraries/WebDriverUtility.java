@@ -6,6 +6,7 @@ import java.time.Duration;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -257,7 +258,13 @@ public class WebDriverUtility {
 		action = new Actions(driver);
 		action.dragAndDrop(src, dest).perform();
 	}
-	
+	/**
+	 * This method is used to navigate to the application
+	 * @param browser
+	 * @param url
+	 * @param timeout
+	 * @return
+	 */
 	public WebDriver openApplication(String browser, String url, long timeout) {
 		driver = launchBrowser(browser);
 		maximizeBrowser();
@@ -265,6 +272,15 @@ public class WebDriverUtility {
 		waitTillElementFound(timeout);
 		return driver;	
 	}
-	
-	
+	/**
+	 * This method is used to convert dynamic xpath to web element
+	 * @param dynamicPath
+	 * @param replaceData
+	 * @return
+	 */
+	public WebElement convertDynamicXpathToWebElement(String dynamicPath, String replaceData)
+	{
+		String requiredPath = String.format(dynamicPath, replaceData);
+		return driver.findElement(By.xpath(requiredPath));
+	}
 }

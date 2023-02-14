@@ -16,6 +16,7 @@ import genericLibraries.ExcelUtility;
 import genericLibraries.IConstantPath;
 import genericLibraries.JavaUtility;
 import genericLibraries.PropertiesFileUtility;
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 
 
@@ -63,7 +64,7 @@ public class CreateOrganization {
 			System.out.println("pass");
 		else
 			System.out.println("fail");
-		homepage.clickOrganization();
+		homepage.clickRequiredTab(driverutility, TabNames.ORGANIZATIONS);
 		//driver.findElement(By.xpath("//td[@class='tabSelected']/following::td[@class='small']/descendant::a[contains(text(),'Organizations')]")).click();
 	
 		//String orgpage = driver.findElement(By.xpath("//a[@class='hdrLink']")).getText();

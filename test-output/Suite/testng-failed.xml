@@ -1,20 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="genericLibraries.ListenersImplementation"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="edu.listenerImp.CreateOrganization">
+      <class name="edu.TestScripts.CreateEvent">
         <methods>
           <include name="methodSetup"/>
           <include name="classSetup"/>
-          <include name="methodTeardown"/>
           <include name="classTeardown"/>
+          <include name="methodTeardown"/>
+          <include name="EventCreation"/>
+        </methods>
+      </class> <!-- edu.TestScripts.CreateEvent -->
+      <class name="edu.TestScripts.CreateLeads">
+        <methods>
+          <include name="methodSetup"/>
+          <include name="classSetup"/>
+          <include name="classTeardown"/>
+          <include name="methodTeardown"/>
+          <include name="leadCreation"/>
+        </methods>
+      </class> <!-- edu.TestScripts.CreateLeads -->
+      <class name="edu.TestScripts.CreateContact">
+        <methods>
+          <include name="createContact"/>
+          <include name="methodSetup"/>
+          <include name="classSetup"/>
+          <include name="classTeardown"/>
+          <include name="methodTeardown"/>
+        </methods>
+      </class> <!-- edu.TestScripts.CreateContact -->
+      <class name="edu.TestScripts.CreateOrganization">
+        <methods>
+          <include name="methodSetup"/>
+          <include name="classSetup"/>
+          <include name="classTeardown"/>
+          <include name="methodTeardown"/>
           <include name="createOrg"/>
         </methods>
-      </class> <!-- edu.listenerImp.CreateOrganization -->
+      </class> <!-- edu.TestScripts.CreateOrganization -->
+      <class name="edu.TestScripts.AddContactToExisitingOrganaization">
+        <methods>
+          <include name="methodSetup"/>
+          <include name="AddContact"/>
+          <include name="classSetup"/>
+          <include name="classTeardown"/>
+          <include name="methodTeardown"/>
+        </methods>
+      </class> <!-- edu.TestScripts.AddContactToExisitingOrganaization -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

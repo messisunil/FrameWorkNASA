@@ -16,6 +16,7 @@ import genericLibraries.ExcelUtility;
 import genericLibraries.IConstantPath;
 import genericLibraries.JavaUtility;
 import genericLibraries.PropertiesFileUtility;
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 
 public class ChooseIndustryInCreateOrgnaization {
@@ -54,7 +55,7 @@ public class ChooseIndustryInCreateOrgnaization {
 			System.out.println("pass");
 		else
 			System.out.println("fail");
-		home.clickOrganization();
+		home.clickRequiredTab(driverUtil, TabNames.ORGANIZATIONS);
 //		driver.findElement(By.xpath("//td[@class='tabSelected']/following::td[@class='small']/descendant::a[contains(text(),'Organizations')]")).click();
 		if(driver.getTitle().contains("Organizations"))
 			System.out.println("pass");

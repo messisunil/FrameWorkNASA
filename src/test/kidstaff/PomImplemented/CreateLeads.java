@@ -17,6 +17,7 @@ import genericLibraries.ExcelUtility;
 import genericLibraries.IConstantPath;
 import genericLibraries.JavaUtility;
 import genericLibraries.PropertiesFileUtility;
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
 
@@ -63,7 +64,7 @@ public class CreateLeads {
 			System.out.println("pass");
 		else
 			System.out.println("fail");
-		home.clickLeads();
+		home.clickRequiredTab(driverutility, TabNames.LEADS);
 //		driver.findElement(By.xpath("//td[@class='tabUnSelected']/a[contains(text(),'Leads')]")).click();
 		if(driver.getTitle().contains("Leads"))
 			System.out.println("pass");

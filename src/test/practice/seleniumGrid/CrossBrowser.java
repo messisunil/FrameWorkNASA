@@ -17,7 +17,7 @@ public class CrossBrowser {
 	@BeforeMethod
 	public void bm(String browser) throws MalformedURLException
 	{
-		URL url = new URL("http://192.168.216.50:4444/wd/hub");
+		URL url = new URL("http://192.168.29.49:4444/wd/hub");
 		DesiredCapabilities cap = new DesiredCapabilities();
 		cap.setPlatform(Platform.WINDOWS);
 		
@@ -25,6 +25,7 @@ public class CrossBrowser {
 		{
 		case "chrome": cap.setBrowserName(browser);break;
 		case "firefox": cap.setBrowserName(browser); break;
+		case "edge": cap.setBrowserName(browser);break;
 		default: System.out.println("not valid");
 		}
 		

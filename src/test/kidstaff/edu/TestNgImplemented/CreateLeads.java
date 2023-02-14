@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import genericLibraries.TabNames;
 
 
 public class CreateLeads extends BaseClass {
@@ -15,7 +16,7 @@ public class CreateLeads extends BaseClass {
 	{
 		SoftAssert soft = new SoftAssert();
 		soft.assertTrue(driver.getTitle().contains("Home"));
-		homePage.clickLeads();
+		homePage.clickRequiredTab(web, TabNames.LEADS);
 		soft.assertTrue(driver.getTitle().contains("Leads"));
 		leadsPage.clickCreateLeads();
 		soft.assertTrue(createLeadsPage.getCreateLeadsHeader().contains("New"));

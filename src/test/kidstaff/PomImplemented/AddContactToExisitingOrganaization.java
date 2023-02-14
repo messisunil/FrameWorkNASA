@@ -20,6 +20,7 @@ import genericLibraries.ExcelUtility;
 import genericLibraries.IConstantPath;
 import genericLibraries.JavaUtility;
 import genericLibraries.PropertiesFileUtility;
+import genericLibraries.TabNames;
 import genericLibraries.WebDriverUtility;
 
 public class AddContactToExisitingOrganaization {
@@ -49,7 +50,7 @@ public class AddContactToExisitingOrganaization {
 			System.out.println("pass");
 		else
 			System.out.println("fail");
-		home.clickContacts();
+		home.clickRequiredTab(webDriverUtil, TabNames.CONTACTS);
 		if(driver.getTitle().contains("Contacts"))
 			System.out.println("pass");
 		else

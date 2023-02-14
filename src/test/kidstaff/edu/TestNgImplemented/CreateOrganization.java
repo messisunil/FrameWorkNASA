@@ -7,6 +7,7 @@ import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import genericLibraries.TabNames;
 
 
 public class CreateOrganization  extends BaseClass{
@@ -15,7 +16,7 @@ public class CreateOrganization  extends BaseClass{
 	{
 		SoftAssert soft = new SoftAssert();
 		soft.assertTrue(homePage.verifyHomePage().equalsIgnoreCase("Home"));
-		homePage.clickOrganization();
+		homePage.clickRequiredTab(web, TabNames.ORGANIZATIONS);
 		soft.assertTrue(orgPage.verifyOrganizationPageName().equals("Organizations"));
 		orgPage.clickPlusButton();
 		soft.assertTrue(createOrgPage.verifyHeader().equals("Creating New Organization"));
